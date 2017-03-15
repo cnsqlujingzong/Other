@@ -1,0 +1,217 @@
+﻿<%@ WebHandler Language="C#" Class="json" %>
+
+using System;
+using System.Web;
+using System.Collections.Specialized;
+using System.Web.Script.Serialization;
+using System.Collections.Generic;
+using System.Data;
+public class json : IHttpHandler
+{
+    private static readonly JavaScriptSerializer jss = new JavaScriptSerializer();
+    public void ProcessRequest(HttpContext context)
+    {
+        context.Response.AppendHeader("Connection", "keep-alive");
+        context.Response.ContentType = "text/javascript";
+        string args;
+        NameValueCollection Parms = new NameValueCollection();
+        if (context.Request.RequestType.ToLower() == "get")
+        {
+            Parms = context.Request.QueryString;
+            args = context.Request.QueryString["m"];
+        }
+        else
+        {
+            Parms = context.Request.Form;
+            args = context.Request.Form["m"];
+        }
+
+        switch (args)
+        {
+            case "GetToday":
+                string r = GetToday();
+                context.Response.Write(r);
+                break;
+            case "save":
+                string save = SaveRD(Parms);
+                context.Response.Write(save);
+                break;                
+            case "report":
+                  string data = AllData();
+                  context.Response.Write(data);
+                break;
+        }
+
+
+
+        context.Response.End();
+    }
+    /// <summary>
+    /// 获得当天数据模板
+    /// </summary>
+    /// <returns></returns>   
+    private string GetToday()
+    {
+        #region 获取当天数据
+        Dictionary<string, Object> map = new Dictionary<string, Object>();
+        try
+        {
+            Game game = new Game();
+            game.GetModel("  state=1 ");//获取最近一个开启的比赛
+
+            USER user = new USER();
+            List<USER> users = user.GetList2(" RelName in (" + game.Users + ") ");
+            map.Add("users", users);
+            map.Add("game", game);
+
+
+            GameRecord gr = new GameRecord();
+            string where = @"(CurrerDate IN   (SELECT MAX(CurrerDate) AS Expr1  FROM GameRecord GameRecord_1    WHERE (UserName IN (" + game.Users + ")) AND (Gid = " + game.ID + ") and (ZT=1) GROUP BY UserName) and ZT=1)";
+            List<GameRecord> dt_GR = gr.GetList2(where);
+            map.Add("gr", dt_GR);
+            map.Add("Status", "ok");
+        }
+        catch (Exception e)
+        {
+            map.Add("Status", e.Message);
+        }
+
+
+        return jss.Serialize(map); ;
+
+
+        #endregion
+    }
+    /// <summary>
+    /// 保存记录
+    /// </summary>
+    /// <param name="parms"></param>
+    /// <returns></returns>
+    private string SaveRD(NameValueCollection parms)
+    {
+        Dictionary<string, Object> map = new Dictionary<string, Object>();
+        string p = parms["p"];
+        dynamic param = jss.Deserialize(p, typeof(object));
+        GameRecord gr = new GameRecord();
+        gr.UserName = param["name"];
+        gr.IninMoney = decimal.Parse(param["init"]);
+        //gr.yj = decimal.Parse(param["yd"]);
+        gr.YMoney = decimal.Parse(param["ym"]);
+        gr.CurrerDate = DateTime.Parse(param["td"]);
+        gr.TMoney = decimal.Parse(param["tm"]);
+        gr.Gid = Convert.ToInt32(param["gid"]);
+        GameRecord gr2 = new GameRecord();      
+        gr.Profit = gr.TMoney - gr.IninMoney;
+        gr.TLv =decimal.Parse(string.Format("{0:N2}",(gr.TMoney - gr.YMoney) / gr.YMoney * 100));
+        gr.TTLV = decimal.Parse(string.Format("{0:N2}",(gr.TMoney - gr.IninMoney) / gr.IninMoney * 100));
+        gr.BestLV = gr2.GetSc(" select MAX(TTLV) from GameRecord where Gid=" + gr.Gid + " and UserName='" + gr.UserName + "' and ZT=1");
+        if (gr.TTLV > gr.BestLV)
+        {
+            gr.BestLV = gr.TTLV;
+        }
+        GameRecord gr3 = new GameRecord();
+        gr3.ChangZT(gr.UserName, string.Format("{0:yyyy-MM-dd}", gr.CurrerDate));
+        gr.ZT = 1;
+        gr.Add();
+   
+        //gr3.GetModel("");
+        map.Add("Status", "ok");
+        return jss.Serialize(map); 
+    }
+    string[] colors = { "#7cb5ec", "#FF00CC", "#90ed7d", "red", "#f7a35c", "#8085e9", "#0000FF", "#9955AA", "#2b908f", "#f45b5b", "#5846BA", "#BBCCDD", "#9F35FF", "	#FFDC35", "#FF5809", "#02F78E", "#0000E3" };                       
+    /// <summary>
+    /// 综合报表
+    /// </summary>
+    /// <param name="parms"></param>
+    /// <returns></returns>
+    public string AllData()
+    {
+        Dictionary<string, Object> map = new Dictionary<string, Object>();
+        try
+        {
+            Game game = new Game();
+            game.GetModel("  state=1 ");//获取最近一个开启的
+            //所有日期
+            GameRecord gr = new GameRecord();
+            List<string> allday = gr.GetAllDate(game.ID.ToString());
+            //获取所有人
+            USER user = new USER();
+            List<USER> users = user.GetList2(" RelName in (" + game.Users + ") ");
+            List<UD> udlist = new List<UD>();
+            List<UD2> udlist2 = new List<UD2>();
+            int indexColor = 0;
+            foreach (USER item in users)
+            {
+                UD ud = new UD();
+                ud.name = item.RelName;
+                UD2 ud2 = new UD2();
+                ud2.name = item.RelName;
+                string sql = "select * from GameRecord where Gid=" + game.ID + " and UserName='" + item.RelName + "' and ZT=1 order by CurrerDate";
+                DataTable dt = SiteD.DBUtility.DbHelperOleDb.Query(sql).Tables[0];
+                List<decimal> dl = new List<decimal>();
+                List<decimal> dl2 = new List<decimal>();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    decimal c = dt.Rows[i]["TTLV"] == null || dt.Rows[i]["TTLV"] == "" ? 0 : decimal.Parse(dt.Rows[i]["TTLV"].ToString());
+                    dl.Add(c);
+                    if (i == dt.Rows.Count - 1)
+                    {
+                        dl2.Add(c);
+                    }
+                }
+                ud.data = dl;
+                ud2.data = dl2;
+                ud.color = colors[indexColor];
+                ud2.color = colors[indexColor];
+                udlist.Add(ud);
+                udlist2.Add(ud2);
+                indexColor++;
+            }
+
+            #region 图表
+            string where = @"(CurrerDate IN   (SELECT MAX(CurrerDate) AS Expr1  FROM GameRecord GameRecord_1    WHERE (UserName IN (" + game.Users + ")) AND (Gid = " + game.ID + ") and (ZT=1) GROUP BY UserName) and ZT=1)";
+            List<GameRecord> dt_GR = gr.GetList2(where, "table");
+            #endregion
+
+
+
+
+            
+            map.Add("date", allday);
+            map.Add("data", udlist);
+            map.Add("data2", udlist2);
+            map.Add("table", dt_GR);
+            map.Add("Status", "ok");
+            //综合排名End
+            //柱状图
+
+            return jss.Serialize(map);
+        }
+        catch (Exception e)
+        {
+            map.Add("error", e.Message+e.StackTrace);
+            return jss.Serialize(map);
+        }
+    }
+
+    public class UD
+    {
+      public  string name { get; set; }
+     public   List<decimal> data { get;set;}
+     public string color { get; set; }
+    }
+    public class UD2
+    {
+        public string name { get; set; }
+        public List<decimal> data { get; set; }
+        public string color { get; set; }
+    }
+    public bool IsReusable
+    {
+        get
+        {
+            return false;
+        }
+    }
+
+}

@@ -1,0 +1,5 @@
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Model\bin\Debug\SHUniversity.KPI.Model.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Model\bin\Debug\SHUniversity.KPI.Model.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Model\obj\Debug\SHUniversity.KPI.Model.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Model\obj\Debug\SHUniversity.KPI.Model.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

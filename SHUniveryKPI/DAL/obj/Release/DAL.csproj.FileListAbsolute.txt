@@ -1,0 +1,8 @@
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Release\SHUniversity.KPI.DAL.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Release\MySql.Data.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Release\SHUniversity.KPI.Common.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Release\SHUniversity.KPI.DBUtility.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Release\SHUniversity.KPI.Model.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Release\OpenSmtp.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\obj\Release\SHUniversity.KPI.DAL.dll

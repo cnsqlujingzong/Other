@@ -1,0 +1,8 @@
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\bin\Debug\MRP.exe
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\bin\Debug\MRP.pdb
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\obj\Debug\MRP.csprojResolveAssemblyReference.cache
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\obj\Debug\MRP.Form1.resources
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\obj\Debug\MRP.Properties.Resources.resources
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\obj\Debug\MRP.csproj.GenerateResource.Cache
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\obj\Debug\MRP.exe
+E:\vp\showcase\suqianxiewang.com\mrp\MRP\obj\Debug\MRP.pdb

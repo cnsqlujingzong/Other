@@ -1,0 +1,2 @@
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Model\bin\Release\SHUniversity.KPI.Model.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Model\obj\Release\SHUniversity.KPI.Model.dll

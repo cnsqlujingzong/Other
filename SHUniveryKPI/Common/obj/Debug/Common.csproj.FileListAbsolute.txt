@@ -1,0 +1,8 @@
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\bin\Debug\SHUniversity.KPI.Common.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\bin\Debug\SHUniversity.KPI.Common.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\bin\Debug\OpenSmtp.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\bin\Debug\SHUniversity.KPI.Model.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\bin\Debug\SHUniversity.KPI.Model.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\obj\Debug\SHUniversity.KPI.Common.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\Common\obj\Debug\SHUniversity.KPI.Common.pdb

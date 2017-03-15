@@ -1,0 +1,9 @@
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\bin\Debug\SHUniversity.KPI.DBUtility.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\bin\Debug\SHUniversity.KPI.DBUtility.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\obj\Debug\SHUniversity.KPI.DBUtility.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\obj\Debug\SHUniversity.KPI.DBUtility.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\bin\Debug\IBatisNet.Common.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\bin\Debug\MySql.Data.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DBUtility\bin\Debug\System.Data.SQLite.DLL

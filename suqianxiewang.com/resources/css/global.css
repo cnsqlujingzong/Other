@@ -1,0 +1,99 @@
+﻿ html, body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-size: 12px;
+            font-family: "arial";
+            color: #444;
+            height:100%;
+        }
+        
+        ul, li
+        {
+            list-style-type: none;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            display: list-item;
+        }
+        
+        a:link
+        {
+            text-decoration: none;
+            color: #303030;
+        }
+        a:visited
+        {
+            color: #303030;
+        }
+        a:hover
+        {
+            color: #f30;
+        }
+        .iconfl
+        {
+            background: url(../img/pictures.gif) no-repeat;
+        }
+         .iconf2
+        {
+            background: url(../img/add.gif) no-repeat;
+        }
+         .iconf3
+        {
+            background: url(../img/cross.gif) no-repeat;
+    width: 60px;
+}
+          .iconf4
+        {
+            background: url(../img/back.gif) no-repeat;
+       
+        }
+      ul li a
+        {
+            font-size: 14px;
+            font-family: "arial";
+            display: block;
+            padding: 0px 20px;
+            float: left;
+            color: #333;
+            text-decoration: none;
+            vertical-align:bottom;
+            }
+        ul li
+        {
+           float: left;
+            width:97px;
+            height:30px;
+            }
+        th
+        {
+         background:#D2E0F1;
+         color: #4372B0;
+         font-size:12px;
+         height:24px;
+            }
+            tbody tr
+            {
+                height:30px;
+                }
+                tbody td{border: 1px solid #99BBE8; text-align:center;}
+                
+                
+                
+ .save, .reset, .cancel {
+background: url(../img/achick.gif) no-repeat;
+width: 111px;
+height: 32px;
+display: block;
+color: #4372B0;
+text-align: center;
+text-decoration: none;
+font-size: 12px;
+line-height: 30px;
+_line-height: 32px;
+float: left;
+margin: 0px 10px;
+font-weight: bold;
+float: right;
+cursor: pointer;
+border: none;
+}

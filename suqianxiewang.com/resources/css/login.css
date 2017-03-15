@@ -1,0 +1,655 @@
+html {
+    height: 100%;
+}
+body {
+    background: #d3e5fe url('../img/backgroundGradient_5x898.png') repeat-x;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.maincontainer {
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    height: 100%;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #f3f3f3;
+    /* IE10 */
+    background-image: -ms-linear-gradient(left, #FFFFFF 0%, #EDEDED 50%, #D6D6D6 60%, #828282 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(left, #FFFFFF 0%, #EDEDED 50%, #D6D6D6 60%, #828282 100%);
+    /* Opera */
+    background-image: -o-linear-gradient(left, #FFFFFF 0%, #EDEDED 50%, #D6D6D6 60%, #828282 100%);
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(left, #FFFFFF 0%, #EDEDED 50%, #D6D6D6 60%, #828282 100%);
+    /* Proposed W3C Markup */
+    background-image: linear-gradient(left, #FFFFFF 0%, #EDEDED 50%, #D6D6D6 60%, #828282 100%);
+}
+.leftshadow {
+    -moz-box-shadow: -2px 4px 7px #c9c9c9;
+    -webkit-box-shadow: -2px 4px 7px #c9c9c9;
+    box-shadow: -2px 4px 7px #c9c9c9;
+    width:875px;
+    height: auto;
+    background-color: #fff;
+    margin:auto;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+.logocontainer {
+    height:62px;
+    background: #d3e5fe url('../img/login-hdr-tile.png') repeat-x left -1px;
+    -webkit-border-top-left-radius: 7px;
+    -webkit-border-top-right-radius: 7px;
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.qbologo {
+    float:left;
+    height:62px;
+    width:394px;
+    background: #025AB8 url('../img/login_sprite.png') no-repeat -2px -1px;
+    -moz-border-radius-topleft:7px;
+    -webkit-border-top-left-radius:7px;
+    border-top-left-radius:7px;
+}
+.betatag {
+    background: url('../img/Beta-tag1.png') no-repeat;
+    float: left;
+    height: 13px;
+    width: 28px;
+    margin-top: 20px
+}
+.webpiece {
+    background: no-repeat 50% 100%;
+    float: right;
+    height: 62px;
+    width: 152px;
+    margin-right: 15px;
+}
+.intuitlogo {
+    float:right;
+    height:62px;
+    width:98px;
+    background: #d3e5fe url('../img/login_sprite.png') no-repeat left -68px;
+    -moz-border-radius-topright:7px;
+    -webkit-border-top-right-radius:7px;
+    border-top-right-radius:7px;
+}
+.bodycontainer {
+    background-color: transparent;
+}
+.bodycontainercsbg {
+    background-color: #ffffff;
+}
+.comingsooncontainer {
+    width: 490px;
+    height: 100%;
+    -moz-border-radius-bottomleft:7px;
+    -webkit-border-bottom-left-radius:7px;
+    border-bottom-left-radius:7px;
+}
+.logincontainer {
+    width:360px;
+    padding-top:27px;
+    padding-left:15px;
+    z-index: 100;
+    background-color: #ffffff;
+    -moz-border-radius-bottomright:7px;
+    -webkit-border-bottom-right-radius:7px;
+    border-bottom-right-radius:7px;
+    height: 100%;
+}
+.logincontainertitle {
+    margin-top:10px;
+    margin-left:20px;
+    font: normal bold 23px trebuchet ms, arial, sans-serif;
+    color:#333333;
+    padding-bottom:5px;
+}
+.fieldcontainer {
+    margin-top:15px;
+}
+.field_label {
+    width:80px;
+    text-align:right;
+    float:left;
+    font: normal bold 12px arial, sans-serif;
+    color:#333333;
+    margin-top:3px;
+}
+.fielddiv {
+    margin-left:10px;
+    float:left;
+}
+.textfield {
+    height:25px !important;
+    width:200px !important;
+    padding: 3px 5px !important;
+    _height:19px !important;
+    height:19px !important;
+}
+.clear {
+    clear:both;
+}
+.comingsoontitle {
+    margin-top:25px;
+    margin-left:50px;
+    font: normal bold 23px trebuchet ms, arial, sans-serif;
+    color:#4e9e19;
+}
+.comingsoontitle.smalltext {
+    font-size: 21px;
+}
+.comingsoonsubtitle {
+    font: bold 10px arial, sans-serif;
+    padding-left:50px;
+    color:#333333;
+    padding-bottom: 15px;
+}
+.comingsoonimage {
+    height:299px;
+    width:394px;
+    cursor:pointer;
+    background: url('../img/login_features.jpg') no-repeat;
+    margin-left:58px;
+    margin-top:18px;
+}
+.blogfeed {
+    height:185px;
+    width:394px;
+    margin-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align:center;
+}
+.firefox {
+    background: url('../img/login_features_firefox.jpg') no-repeat;
+}
+.chrome {
+    background: url('../img/login_features_chrome.jpg') no-repeat;
+}
+.bookmark {
+    margin-left:26px;
+    margin-bottom: 10px;
+    position:relative;
+}
+.bookmark div {
+    color:#76818C;
+    font: 10px "Arial";
+}
+.footercontainer {
+    width:875px;
+    margin-left:auto;
+    margin-right:auto;
+    color:#76818C;
+    font: normal normal 11px arial, sans-serif;
+    margin-top:11px;
+}
+.copyright {
+    float:left;
+    margin-left:16px;
+    margin-top:7px;
+}
+.footerlinkscontainer {
+    float:right;
+    margin-right:22px;
+    width:360px;
+}
+.footerlinks {
+    float:right;
+    margin-top:7px;
+}
+.verity {
+    float:left;
+    width:63px;
+    height:35px;
+    background: url('../img/login_footer_sprite.png') no-repeat left top;
+    cursor:pointer;
+}
+.trustesprite {
+    float:left;
+    width:100px;
+    height:35px;
+    background: url('../img/login_footer_sprite.png') no-repeat -93px top;
+    margin-left:27px;
+    cursor:pointer;
+}
+.helpcontainer {
+    margin-left:28px;
+    padding-bottom: 50px;
+}
+.helpicon {
+    background: url('../img/login_footer_sprite.png') no-repeat -196px top;
+    width:16px;
+    height:15px;
+    float:left;
+}
+.inlinehelpicon {
+    background: url('../img/login_footer_sprite.png') no-repeat -196px top;
+    width:16px;
+    height:15px;
+}
+.helptitle {
+    margin-left:6px;
+    font: normal bold 12px arial, sans-serif;
+    color: #2b73dd;
+    float:left;
+}
+.helpcontent {
+    visibility:hidden;
+    _margin-top:-20px;
+    *
+    margin-top:-20px;
+}
+.helpkbs {
+    margin-left:-4px;
+    _margin-left:40px;
+    *
+    margin-left:40px;
+}
+.helpcontainertitle {
+    margin-top:30px;
+    _margin-top:30px;
+    *
+    margin-top:30px;
+}
+.qubie {
+    margin-top:22px;
+    margin-left:23px;
+}
+.qubietext {
+    font: normal bold 12px arial, sans-serif;
+    color:#333333;
+    float:left;
+}
+.qubieimg {
+    float:left;
+    background: url('../img/login_footer_sprite.png') no-repeat -215px top;
+    width:19px;
+    height:16px;
+    margin-left:5px;
+}
+.qubielink {
+    float:left;
+    margin-left:5px;
+    text-decoration: none;
+}
+a.regular_link {
+    font: normal normal 11px arial, sans-serif;
+    color: #2b73dd;
+    text-decoration: none;
+}
+a.company_link {
+    font: normal normal 12px arial, sans-serif;
+    color: #2b73dd;
+    text-decoration: none;
+}
+a.footer_link {
+    color:#76818C;
+    text-decoration: none;
+}
+a.blog_link {
+    color:#286fff;
+    text-decoration: none;
+}
+a.blog_link:hover, a.regular_link:hover, a.footer_link:hover {
+    text-decoration: underline ! important;
+    cursor: pointer;
+}
+a.company_link:hover {
+    text-decoration: underline ! important;
+    cursor: pointer;
+    color: #990000;
+}
+.cancelled_companies_box {
+    -moz-border-radius:5px;
+    -webkit-border-radius: 5px;
+    background-color:#f1f6f9;
+    border:1px solid #dbe9f4;
+    font: normal normal 12px arial, sans-serif;
+    color:#333333;
+    padding:7px 9px 7px 8px;
+    margin-left:23px;
+    margin-top:12px;
+    width:475px;
+    margin-bottom:10px;
+}
+.username {
+    font: normal bold 12px arial, sans-serif;
+    color: #333333;
+    float:right;
+    margin-right:21px;
+    margin-top:10px;
+    _margin-top:10px;
+    *
+    margin-top:10px;
+}
+.cswarning {
+    font: normal normal 12px arial, sans-serif;
+    color: #9b0103;
+    margin-left:2px;
+}
+.imgpadding {
+    padding-top:1px;
+}
+.cstitle {
+    padding-top:30px;
+    padding-left:23px;
+    font: normal bold 23px trebuchet ms, arial, sans-serif;
+}
+.cssubtitle {
+    margin-top:12px;
+    margin-left:25px;
+    font: normal bold 12px arial, sans-serif;
+    color:#505050;
+}
+.company-list-container {
+    margin-top:25px;
+    margin-left:24px;
+}
+.company-list-item {
+    list-style-type:disc;
+    margin-top:7px;
+    color:#505050;
+    font-size:11px;
+}
+.company-list {
+    margin-left:23px;
+}
+.company-list-title {
+    font: normal bold 14px arial, sans-serif;
+    color:#505050;
+}
+.emptyblock {
+    height:10px;
+}
+DIV.footer, DIV.push {
+    height: 2em;
+}
+#fillbgtop {
+    background: url("../img/1pixelwidth.gif") repeat top left;
+    width: 100%;
+    overflow: hidden
+}
+#fillbgbottom {
+    width: 100%;
+    overflow: hidden;
+    color: #333333;
+}
+HR {
+    color: #333333;
+}
+HR.footer {
+    height: 2px;
+    color: #333333;
+}
+.footer {
+    color: #333333;
+}
+SPAN.verisignBold {
+    font-weight: bold;
+    font-size: 11px;
+}
+SPAN.misc {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    color: black;
+}
+SPAN.miscBlue {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    color: #2b73dd;
+}
+DIV.misc {
+    font-weight: bold;
+    font-size: 12px;
+}
+.loginButton {
+    background-color: #FFFFFF;
+    border: 1px outset;
+    width: 80px;
+};
+.loginButton2 {
+    background-color: #FFFFFF;
+    border: 1px outset
+};
+.button_instructions {
+    font-size: xx-small;
+}
+A.secure_white_anchor_ALT_UNDERLINE {
+    text-decoration: none;
+    COLOR: #333333;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+A.secure_white_anchor_ALT_UNDERLINE:hover {
+    text-decoration: underline;
+    COLOR: #333333;
+    cursor: pointer;
+}
+A.secure_anchor_ALT_UNDERLINE {
+    text-decoration: none;
+    COLOR: #2b73dd;
+    cursor: pointer;
+}
+A.secure_anchor_ALT_UNDERLINE:hover {
+    text-decoration: underline;
+    COLOR: #2b73dd;
+    cursor: pointer;
+}
+.secure_anchor_over_ALT_UNDERLINE {
+    text-decoration: underline;
+    COLOR: #FFFFFF;
+    cursor: pointer;
+}
+span.instructions A, span.instructions SPAN {
+    font-family: arial, sans-serif;
+    font-size: xx-small;
+    color: #2b73dd;
+    font-weight: normal;
+}
+span.instructions A:link {
+    font-family: arial, sans-serif;
+    font-size: xx-small;
+    color: #2b73dd;
+    font-weight: normal;
+}
+span.instructions A:visited {
+    font-family: arial, sans-serif;
+    font-size: xx-small;
+    color: #003366;
+    font-weight: normal;
+}
+.divider {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    border-bottom: 1px solid #D3D1D2;
+    line-height: 1px;
+    height: 1px;
+}
+UL.misc_bullet_indent_HDI {
+    list-style-position: outside;
+    margin-left: 15px;
+    padding-left: 6px;
+    margin-bottom: 0;
+    margin-top: 3px;
+}
+LI.misc_bullet_indent_HDI {
+    list-style: square outside;
+    margin-left: 0;
+    font-family: arial, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+A.misc {
+    font-family: arial, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    color: #2b73dd;
+}
+div.errordiv {
+    color: #CC0000;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom:5px;
+    background: url("../img/i_alert_16x16.gif") no-repeat;
+    padding: 2px 0 5px 20px;
+}
+.subErrorMessage {
+    font-weight: normal;
+    font-size: 11px;
+    margin: 5px 0 5px 0;
+}
+.normalText {
+    font-weight: normal;
+}
+div.browser {
+    color:#4e9e19;
+    font: 13px Arial italic;
+    margin-right: 20px;
+    margin-left: 28px;
+}
+div.browser div {
+    color:#4e9e19;
+    font: 13px Arial italic;
+}
+div.browser1 {
+    background: transparent url("../img/Chrome_Logo.png") no-repeat;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+div.browser2 {
+    background: transparent url("../img/Firefox_Logo.png") no-repeat;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+.rememberMe {
+    cursor: pointer;
+}
+#signuplink {
+    margin-top: 10px;
+}
+/*Start locale specific styles*/
+#margin32 {
+    height:32px;
+}
+.en_GB #margin32, .en_SG #margin32, .en_CA #margin32{
+    height:15%;
+}
+.en_GB .generalcontainer, .en_SG .generalcontainer, .en_CA .generalcontainer {
+    width:500px;
+}
+.en_GB .qbologo, .en_SG .qbologo, .en_CA .qbologo {
+    width:180px;
+}
+.en_GB .webpiece, .en_SG .webpiece, .en_CA .webpiece {
+    display: none;
+}
+.en_GB .bodycontainer, .en_SG .bodycontainer, .en_CA .bodycontainer {
+    background: #FFFFFF;
+}
+.en_GB .comingsooncontainer, .en_SG .comingsooncontainer, .en_CA .comingsooncontainer {
+    display:none;
+}
+.en_GB .morehelplinks, .en_SG .morehelplinks, .en_CA .morehelplinks{
+    display:none;
+}
+.en_GB .logincontainer, .en_SG .logincontainer, .en_CA .logincontainer {
+    float:left;
+    margin-left: 15%;
+    border: none;
+}
+.en_GB .bookmark, .en_SG .bookmark, .en_CA .bookmark {
+    visibility: hidden;
+}
+.en_GB .footerlinkscontainer, .en_SG .footerlinkscontainer, .en_CA .footerlinkscontainer {
+    width:180px;
+}
+.en_GB .trusteSeal, .en_SG .trusteSeal, .en_CA .trusteSeal {
+    display:none;
+}
+.en_SG .bottomSignupLink {
+    display:none;
+}
+
+#helpSection {
+	height: 300px;
+}
+
+#helpSection .helpSectionText {
+	margin-left:50px;
+	margin-top:25px;
+	color: #787878;
+}
+
+.pumpkin {
+	position: absolute;
+	left: 46%;
+	-webkit-animation: pumpkin1 2s ease infinite alternate 0;
+	-moz-animation: 2s ease 0s alternate none infinite pumpkin1;
+	animation: pumpkin1 2s ease infinite alternate 0;
+	top: -6px;
+}
+
+@-webkit-keyframes pumpkin1 {
+
+	from {
+		-webkit-transform: rotate(5deg) translateY(5px);
+	}
+	to {
+		-webkit-transform: rotate(-5deg) translateY(5px);
+	}
+}
+
+@-moz-keyframes pumpkin1 {
+
+	from {
+		-moz-transform: rotate(5deg) translateY(5px);
+	}
+	to {
+		-moz-transform: rotate(-5deg) translateY(5px);
+	}
+}
+
+@keyframes pumpkin1 {
+
+	from {
+		transform: rotate(5deg) translateY(5px);
+	}
+	to {
+		transform: rotate(-5deg) translateY(5px);
+	}
+}
+
+
+.button {
+				font-family: Verdana, Arial, sans-serif;
+                display: inline-block;
+                background: #459300 url('../img/bg-button-green.gif') top left repeat-x !important;
+                border: 1px solid #0068A2 !important;
+                padding: 4px 7px 4px 7px !important;
+                color: #fff !important;
+                font-size: 11px !important;
+                cursor: pointer;
+                }
+                
+.button:hover {
+                text-decoration: underline;
+                }
+                
+.button:active {
+                padding: 5px 7px 3px 7px !important;
+                }

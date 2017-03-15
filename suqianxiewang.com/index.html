@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+		<meta charset=utf-8>
+        <meta name="description" content="宿迁蟹王" />
+        <meta name="keywords" content="骆马湖,螃蟹,湖蟹,大闸蟹"/>
+		<!--<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>--->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="resources/js/base.js"></script>
+        <script type="text/javascript" src="js/ProvinceCity.js"></script>
+        <style>
+                        #cardInfo dl { clear:both;padding:5px 1px;}
+            #cardInfo dd {  float:left;color:#fff;}
+            .ttile{  width:64px}
+        </style>
+        <script>                     
+            if (!IsPC())
+            {
+                window.location.href = "/m/index.html";
+            }
+        </script>
+    </head>
+<body>
+
+  
+		<div id="bf_container" class="bf_container">
+			<div id="bf_background" class="bf_background">
+				<img src="images/background/default.jpg" alt="image1" style="display:none;"/>
+				<div class="bf_overlay"></div>
+			</div>
+			<div id="bf_page_menu" class="bf_menu" >
+				<h1 class="title">Vittori's<span>trattoria italiana</span></h1>
+				<ul>
+                 
+					<li><a href="#" data-content="home"><span class="bf_hover"></span><span>Welcome</span></a></li>
+					<li><a href="#" data-content="useCard"><span class="bf_hover"></span><span>使用提货券</span></a></li>
+                    <li><a href="#" data-content="show"><span class="bf_hover"></span><span>产品欣赏</span></a></li>     		
+					<li><a href="#" data-content="countus"><span class="bf_hover"></span><span>联系我们</span></a></li>
+                   
+				</ul>
+			</div>
+			<div class="bf_page" id="home" style="display: none;">
+				<div class="bf_content_text">
+					<h2>Welcome</h2>
+					<p>自有品牌，注册商标，二十年的市场经验为你送去正宗好吃的湖蟹。个大（大到8两公，6两母），肉质鲜美，  赠送蟹具和礼盒包装。价格美丽。欢迎各位新老顾客选购</p>
+                    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+                    <p >联系电话：15371368028</p>
+                    <p>QQ咨询：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=113909170&amp;site=qq&amp;menu=yes" style="color:#fff"><img src="http://wpa.qq.com/pa?p=2:365362611:45">(113909170)</a></p>
+                    <p>淘宝店铺：<a href="https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-14868253103.37.jNxH51&id=536967633770" target="_blank" style="color:rgb(26, 222, 132)">点击购买>>></a></p>
+                    <p>微信：xacaiyuan</p>
+                    <p><img  src="images/xiewang/erweima.jpg" style="width:200px;"/></p>
+
+				</div>
+			</div>
+			<div class="bf_page" id="useCard">
+				<div class="bf_content_text">
+                    <div id="modal-bg"></div>
+                    <div id="modal-show">
+                        <img src="/images/xiewang/loading.gif" />
+                    </div>
+				
+                        <div id="vcard">
+                            <h2>使用提货券</h2>
+                           <table>
+                               <tr>
+                                   <td class="alginR">卡号：</td>
+                                   <td><input type="text" placeholder=""  id="txtCardNum" value=""/></td>
+                               </tr>
+                               <tr>
+                                   <td class="alginR">密码：</td>
+                                   <td><input type="text" placeholder="" id="txtCardPwd" value=""/></td>
+                               </tr>
+                               <tr>
+                                   <td class="alginR">验证码：</td>
+                                   <td><input type="text" placeholder="" style="width:80px; " id="txtVCode" />&nbsp;<img id="vcode" src="ValidateCode.ashx" style="vertical-align:middle; cursor:pointer" onclick="change()" /></td>
+                               </tr>
+                               <tr>
+                                   <td></td>
+                                   <td><span id="errorMsg" style="color:red"></span></td>
+                               </tr>
+                               <tr>
+                                   <td></td>
+                                   <td><input id="btnVCard" type="button" value="使用" style="color:#000;cursor:pointer" /></td>
+                               </tr>
+                           </table>
+                        
+                         </div>
+                    <div id="cardInfo" style="display:none; padding-left:10px">
+                        <h2>收货信息</h2>
+             
+                            <p>&nbsp;</p>
+                           
+                        <dl><dd class="ttile">收货人：</dd><dd><input type="text" placeholder="" id="txtGName" /></dd></dl><br />
+                        <dl><dd class="ttile">手机号：</dd><dd><input type="text" placeholder="" id="txtGPhone" /></dd></dl><br />
+                        <dl><dd class="ttile">省/市：<dd><div class="area"><select name="province" id="dl_province" style="width:80px"></select>&nbsp;&nbsp;<select name="city" id="dl_city" style="width:80px"></select></div></dd></dl><br />
+                        <dl><dd class="ttile">详细地址：</dd><dd><textarea placeholder="" id="txtAdrr"  rows="5" cols="26"></textarea></dd></dl><br />
+                       <dl><dd class="ttile">&nbsp;&nbsp;&nbsp;</dd><dd><span id="errorMsg2" style="color:red"></span></dd></dl>
+                         <dl><dd class="ttile">&nbsp;&nbsp;</dd><dd><button id="btnSave">提交订单</button></dd></dl>
+
+</div>
+				</div>
+			</div>
+          
+			<div class="bf_page" id="show">
+				<div class="bf_content_text">
+					<h2>Our Menu</h2>
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<ul id="bf_dishes">
+						<li><a href="#"><img src="images/thumbs/1.jpg" alt="thumb1"/></a></li>
+						<li><a href="#"><img src="images/thumbs/2.jpg" alt="thumb2"/></a></li>
+						<li><a href="#"><img src="images/thumbs/3.jpg" alt="thumb3"/></a></li>
+						<li><a href="#"><img src="images/thumbs/4.jpg" alt="thumb4"/></a></li>
+						<li><a href="#"><img src="images/thumbs/5.jpg" alt="thumb5"/></a></li>
+						<li><a href="#"><img src="images/thumbs/6.jpg" alt="thumb6"/></a></li>
+					</ul>
+				</div>
+				<div id="bf_gallery" class="bf_gallery">
+					<a id="bf_close" href="#" class="bf_close"></a>
+					<div class="bf_nav">
+						<a id="bf_prev" href="#" class="bf_prev"></a>
+						<a id="bf_next" href="#" class="bf_next"></a>
+					</div>
+					<div class="bf_gallery_wrapper">
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><h2>Pizza Rustica</h2></div>
+							<div class="bf_desc">
+								<p>Fresh ingredients and authentic flavours</p>
+							</div>
+							<img src="images/foreground/1.jpg" alt="image1" data-bgimg="images/background/1.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><h2>Pizza Quattro Stagioni</h2></div>
+							<div class="bf_desc">
+								<p>Originality meets tradition</p>
+							</div>
+							<img src="images/foreground/2.jpg" alt="image1" data-bgimg="images/background/2.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><h2>Rucolini</h2></div>
+							<div class="bf_desc">
+								<p>Dive into the balance of taste</p>
+							</div>
+							<img src="images/foreground/3.jpg" alt="image1" data-bgimg="images/background/3.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><h2>Salsicce Boscaiola</h2></div>
+							<div class="bf_desc">
+								<p>The right intensity</p>
+							</div>
+							<img src="images/foreground/4.jpg" alt="image1" data-bgimg="images/background/4.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><h2>Tortelloni Alla Zucca</h2></div>
+							<div class="bf_desc">
+								<p>Incredibly tasty perfection</p>
+							</div>
+							<img src="images/foreground/5.jpg" alt="image1" data-bgimg="images/background/5.jpg" />
+						</div>
+						<div class="bf_gallery_item">
+							<div class="bf_heading"><h2>Calamaretti Fritti</h2></div>
+							<div class="bf_desc">
+								<p>Combine chunky and soft</p>
+							</div>
+							<img src="images/foreground/6.jpg" alt="image1" data-bgimg="images/background/6.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="bf_page" id="countus">
+                <div class="bf_content_text">
+                    <h2>联系我们</h2>
+                    <p>联系电话：15371368028</p>
+                    <p>QQ咨询：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=113909170&amp;site=qq&amp;menu=yes" style="color:#fff"><img src="http://wpa.qq.com/pa?p=2:365362611:45">(113909170)</a></p>
+                    <p>淘宝店铺：<a href="https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-14868253103.37.jNxH51&id=536967633770" target="_blank" style="color:rgb(26, 222, 132)">点击购买>>></a></p>
+                    <p>微信：xacaiyuan</p>
+                    <p><img src="images/xiewang/erweima.jpg" style="width:200px;" /></p>
+                </div>
+            </div>
+
+
+		</div>
+		<!-- The JavaScript -->
+		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.template.min.js"></script>
+    </body>
+</html>
+
+<script>
+    function change()
+    {
+        $("#vcode").attr("src", "ValidateCode.ashx");
+    }
+    $(function () {
+        $("#btnVCard").click(function () {
+            SearchCard();
+        });
+        $("#btnSave").click(function () {
+            submitOrder();
+        });
+    
+    })
+    function SearchCard()
+    {
+        var cardNum =$.trim($("#txtCardNum").val());
+        var cardPwd = $.trim($("#txtCardPwd").val());
+        var vcode = $.trim($("#txtVCode").val());
+        if (CheckData(cardNum, cardPwd, vcode))
+        {
+            ShowModal();
+            Post("/Controller/Main.ashx", { cardNum: cardNum, cardPwd: cardPwd, vcode: vcode, m: "vcard" }, function (data) {
+                if (data.r == "0")
+                {
+                    $("#vcard").hide();
+                    $("#cardInfo").show();
+                    $('.area').citySelect(AREA_DATA);
+                } else
+                {
+                    $("#errorMsg").html(data.msg);
+                    change();
+                }
+                HideModal();
+            });
+        }
+    }
+    function submitOrder() {
+        $("#btnSave").attr("disabled", "disabled");
+        var order = {
+            cardNum : $.trim($("#txtCardNum").val()),
+            cardPwd : $.trim($("#txtCardPwd").val()),
+            pname:$.trim($("#txtGName").val()),
+            phone : $.trim($("#txtGPhone").val()),
+            provin : $.trim($("#dl_province").val()),
+            city : $.trim($("#dl_city").val()),
+            address: $.trim($("#txtAdrr").val()),
+            provin2: $.trim($("#dl_province").find("option:selected").text()),
+            city2: $.trim($("#dl_city").find("option:selected").text())
+        };     
+  
+        if (CheckOrderData(order)) {
+            ShowModal();
+            Post("/Controller/Main.ashx", { order: JSON.stringify(order), m: "addorder" }, function (data) {
+                if (data.r == "0") {
+                    $("#errorMsg2").html("订单已经提交成功，订单号：" + data.oid + "<br/>请安心等待!");
+                } else {
+                    $("#errorMsg2").html(data.msg);
+                    $("#btnSave").removeAttr("disabled");
+                }
+                HideModal();
+            });
+        } else {
+            $("#btnSave").removeAttr("disabled");
+        }
+        
+    }
+    //验证卡号
+    function CheckData(cardNum, cardPwd, vcode)
+    {
+        $("#errorMsg").html("");
+        if (isNull(cardNum))
+        {
+            $("#errorMsg").html("请输入提货卡卡号");
+            return false;
+        }
+        if (isNull(cardPwd)) {
+            $("#errorMsg").html("请输入提货卡密码");
+            return false;
+        }
+        if (isNull(vcode)) {
+            $("#errorMsg").html("请输入验证码");
+            return false;
+        }
+        return true;
+    }
+    //验证订单
+    function CheckOrderData(order) {
+        $("#errorMsg2").html("");
+        if (isNull(order.cardNum)) {
+            $("#errorMsg2").html("提货卡信息错误");
+            return false;
+        }
+        if (isNull(order.cardPwd)) {
+            $("#errorMsg2").html("提货卡信息错误");
+            return false;
+        }
+        if (isNull(order.pname)) {
+            $("#errorMsg2").html("请输入收货人姓名");
+            return false;
+        }
+        if (isNull(order.phone)) {
+            $("#errorMsg2").html("请输入手机号");
+            return false;
+        }
+        if (isNull(order.provin) || order.provin=="-2") {
+            $("#errorMsg2").html("请选择省份");
+            return false;
+        }
+        if (isNull(order.city)) {
+            $("#errorMsg2").html("请选择城市");
+            return false;
+        }
+        if (isNull(order.address)) {
+            $("#errorMsg2").html("请输入详细地址");
+            return false;
+        }
+        return true;
+    }
+</script>

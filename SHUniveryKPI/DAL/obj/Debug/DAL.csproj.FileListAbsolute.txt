@@ -1,0 +1,13 @@
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.DAL.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.DAL.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\MySql.Data.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.Common.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.DBUtility.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.Model.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\OpenSmtp.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.Common.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.DBUtility.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\bin\Debug\SHUniversity.KPI.Model.pdb
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\obj\Debug\SHUniversity.KPI.DAL.dll
+d:\Users\jzlu\Source\Workspaces\ShengTang\SHUniveryKPI\DAL\obj\Debug\SHUniversity.KPI.DAL.pdb
